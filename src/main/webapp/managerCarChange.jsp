@@ -54,17 +54,20 @@ body {
 
 				<tr>
 					<td><label><fmt:message key="Carname" /></label></td>
-					<td><input type="text" name="model" value="${theCar.model}" /></td>
+					<td><input type="text" pattern="^\w+$" maxLength="20"
+						name="model" value="${theCar.model}" /> <input type="hidden"
+						name="carId" value="${theCar.id}"></td>
 				</tr>
 				<tr>
 					<td><label><fmt:message key="Mark" /></label></td>
-					<td><input type="text" name="mark" value="${theCar.mark}" /></td>
+					<td><input type="text" pattern="^[a-zA-Z]+$" maxLength="20"
+						name="mark" value="${theCar.mark}" /></td>
 				</tr>
 				<tr>
 					<td><label><fmt:message key="Class" /></label></td>
 					<td><div class="form-group">
-							<label for="carClass">Current class is ${theCar.carClass}</label> <select
-								class="form-control" name="carClass" >
+							<label for="carClass">Current class is ${theCar.carClass}</label>
+							<select class="form-control" name="carClass">
 								<option>crossover</option>
 								<option>sedan</option>
 								<option>minivan</option>
@@ -75,12 +78,13 @@ body {
 				</tr>
 				<tr>
 					<td><label><fmt:message key="Price" /></label></td>
-					<td><input type="text" name="cost" value="${theCar.cost}" /></td>
+					<td><input type="text" pattern="^[0-9]+$" maxLength="6"
+						name="carCost" value="${theCar.cost}" /></td>
 				</tr>
 				<tr>
 					<td class="hidenR"><label></label></td>
 					<td class="hidenL"><button type="submit" class="btn btn-info"
-							name="command" value="update">
+							name="command" value="Update">
 							<span class="glyphicon glyphicon-floppy-save"></span> Save
 						</button></td>
 				</tr>

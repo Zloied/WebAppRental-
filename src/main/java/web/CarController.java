@@ -171,9 +171,7 @@ public class CarController extends HttpServlet {
 	private void loadCar(HttpServletRequest request, HttpServletResponse response) {
 		Car car = null;
 		int carId = Integer.parseInt(request.getParameter("carId"));
-		LOG.error("carId from session " + carId);
 		car = carDaoImp.findCarById(carId);
-		LOG.error("car from DB" + car.getMark());
 		request.getSession().setAttribute("theCar", car);
 
 	}
@@ -186,7 +184,7 @@ public class CarController extends HttpServlet {
 	 */
 	private void addCar(HttpServletRequest request, HttpServletResponse response) {
 		String mark = request.getParameter("mark");
-		String model = request.getParameter("model");
+		String model = request.getParameter("carName");
 		int cost = Integer.parseInt(request.getParameter("carCost"));
 		String carClass = request.getParameter("carClass");
 

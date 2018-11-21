@@ -172,7 +172,7 @@ public class CarDAOImplementation implements CarDAO {
 
 			conn = dataSource.getConnection();
 
-			String sql = "UPDATE car_rental.cars SET model=? , mark=? , carClass=?, cost=? WHERE id=?";
+			String sql = "UPDATE car_rental.cars SET model=? , mark=? , class=?, cost=? WHERE id=?";
 
 			prepStat = conn.prepareStatement(sql);
 

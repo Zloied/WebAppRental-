@@ -102,7 +102,7 @@ body {
 		<form class="form-inline" action="CarController" method="post">
 			<div class="form-group">
 				<label for="carName"><fmt:message key="Carname" /> </label><br>
-				<input type="text" class="form-control" pattern="^\\w+$"
+				<input type="text" class="form-control" pattern="^\w+$"
 					maxLength="20" name="carName" id="carName"
 					title="Only letters,numbers and signs ">
 			</div>
@@ -115,7 +115,7 @@ body {
 			<div class="form-group">
 				<label for="mark"><fmt:message key="Price" /> </label><br> <input
 					type="text" class="form-control" pattern="^[0-9]+$" maxLength="6"
-					name="mark" id="mark" title="Only numbers ">
+					name="carCost" id="mark" title="Only numbers ">
 			</div>
 			<div class="form-group">
 				<label for="carClass"><fmt:message key="Class" /></label><br>
