@@ -55,13 +55,13 @@ body {
 				<tr>
 					<td><label><fmt:message key="Carname" /></label></td>
 					<td><input type="text" pattern="^\w+$" maxLength="20"
-						name="model" value="${theCar.model}" /> <input type="hidden"
+						name="model" value="${theCar.model}" title="Only letters,numbers and signs "/> <input type="hidden"
 						name="carId" value="${theCar.id}"></td>
 				</tr>
 				<tr>
 					<td><label><fmt:message key="Mark" /></label></td>
 					<td><input type="text" pattern="^[a-zA-Z]+$" maxLength="20"
-						name="mark" value="${theCar.mark}" /></td>
+						name="mark" value="${theCar.mark}" title="Only letters "/></td>
 				</tr>
 				<tr>
 					<td><label><fmt:message key="Class" /></label></td>
@@ -79,7 +79,7 @@ body {
 				<tr>
 					<td><label><fmt:message key="Price" /></label></td>
 					<td><input type="text" pattern="^[0-9]+$" maxLength="6"
-						name="carCost" value="${theCar.cost}" /></td>
+						name="carCost" value="${theCar.cost}" title="Only numbers "/></td>
 				</tr>
 				<tr>
 					<td class="hidenR"><label></label></td>
